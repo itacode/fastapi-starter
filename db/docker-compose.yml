@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  my_service_db:
+    image: mysql:8
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./volume:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+    env_file:
+      - ./.env
+    container_name: ${DB_CONTAINER_NAME}
+
+networks:
+  default:
+    name: backend

@@ -1,0 +1,16 @@
+{
+  "name": "openapi-spec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "rimraf ./clients/* && openapi-generator-cli generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.2",
+    "rimraf": "^3.0.2"
+  }
+}

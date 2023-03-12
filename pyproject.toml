@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "fastapi-starter"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.92.0"
+uvicorn = "^0.20.0"
+pymysql = "^1.0.2"
+cryptography = "^38.0.3"
+pandas = "^1.5.1"
+pydantic = "^1.10.2"
+sqlalchemy = "^2.0.4"
+python-multipart = "^0.0.6"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^23.1.0"
+isort = "^5.10.1"
+mypy = "^1.0.1"
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dev = "app.dev_server:start"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = "./tests"
+addopts = "-v"

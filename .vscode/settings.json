@@ -1,0 +1,8 @@
+{
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+}
