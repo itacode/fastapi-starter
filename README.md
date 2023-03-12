@@ -61,7 +61,7 @@ In `openapi-generator` install the required packages:
 ```shell
 npm install
 ```
-Generate clients:
+Start the server then generate clients:
 ```shell
 npm run generate
 ```
