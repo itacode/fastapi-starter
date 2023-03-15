@@ -6,7 +6,6 @@ python -m pip install --upgrade pip
 
 WORKDIR /usr/src/my_service
 COPY app app/
-COPY .env .
 COPY pyproject.toml .
 COPY poetry.lock .
 RUN pip install poetry==1.4 && \
