@@ -4,11 +4,11 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "app"}]
+packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.92.0"
+fastapi = "^0.95.0"
 uvicorn = "^0.20.0"
 pymysql = "^1.0.2"
 cryptography = "^38.0.3"
