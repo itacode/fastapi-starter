@@ -2,7 +2,7 @@ import logging
 import logging.config
 
 from fastapi import FastAPI
-from starlette.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.router import api_router
 
