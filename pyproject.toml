@@ -8,8 +8,8 @@ packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.95.0"
-uvicorn = "^0.20.0"
+fastapi = "^0.95.1"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
 pymysql = "^1.0.2"
 cryptography = "^40.0.1"
 pandas = "^1.5.1"
