@@ -8,15 +8,16 @@ packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.98.0"
-uvicorn = {extras = ["standard"], version = "^0.22.0"}
+fastapi = "^0.100.0"
+uvicorn = { extras = ["standard"], version = "^0.22.0" }
 pymysql = "^1.0.2"
 cryptography = "^40.0.1"
 pandas = "^2.0.1"
-pydantic = "^1.10.2"
+pydantic = "^2.0.2"
 sqlalchemy = "^2.0.4"
 python-multipart = "^0.0.6"
 python-dotenv = "^1.0.0"
+pydantic-settings = "^2.0.1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
@@ -40,6 +41,7 @@ profile = "black"
 
 [tool.mypy]
 ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
 
 [tool.pytest.ini_options]
 testpaths = "./tests"

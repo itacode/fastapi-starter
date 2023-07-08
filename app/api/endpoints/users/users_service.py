@@ -17,6 +17,6 @@ class UsersService:
 
             users: list[User] = []
             for orm_user in orm_users:
-                users.append(User.from_orm(orm_user))
+                users.append(User.model_validate(orm_user))
 
         return self.GetUsersRes(users=users)
