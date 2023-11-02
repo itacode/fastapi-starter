@@ -23,8 +23,8 @@ pydantic-settings = "^2.0.1"
 flake8 = "^6.0.0"
 black = "^23.1.0"
 isort = "^5.10.1"
-mypy = "^1.0.1"
 pytest = "^7.2.0"
+pyright = "^1.1.333"
 
 [build-system]
 requires = ["poetry-core"]
@@ -38,10 +38,6 @@ line-length = 120
 
 [tool.isort]
 profile = "black"
-
-[tool.mypy]
-ignore_missing_imports = true
-plugins = ["pydantic.mypy"]
 
 [tool.pytest.ini_options]
 testpaths = "./tests"

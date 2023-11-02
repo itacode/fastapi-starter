@@ -12,7 +12,7 @@ router = APIRouter()
 _files_service = FilesService()
 
 
-def get_valid_filename(s) -> str:
+def get_valid_filename(s: str) -> str:
     """
     Return the given string converted to a string that can be used for a clean
     filename. Remove leading and trailing spaces; convert other spaces to
