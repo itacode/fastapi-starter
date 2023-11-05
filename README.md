@@ -15,7 +15,7 @@ A boilerplate to start developing microservices in Python.
 - Linter [Flake8](https://flake8.pycqa.org/en/latest/)
 - Code formatter [Black](https://black.readthedocs.io/en/stable/)
 - Imports sorter [isort](https://pycqa.github.io/isort/)
-- Static type checker [Mypy](http://mypy-lang.org/)
+- Static type checker [Pyright](https://github.com/RobertCraigie/pyright-python)
 
 ## Installation
 Visual Studio Code is the recommended editor, please install the recommended extensions in `.vscode/extensions.json`.

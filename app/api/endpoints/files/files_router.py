@@ -25,7 +25,7 @@ def get_valid_filename(s: str) -> str:
     return re.sub(r"[^-\w.]", "", s)
 
 
-@router.get("/files/")
+@router.get("/files")
 def get_files() -> FilesService.GetFilesRes:
     result = _files_service.get_files()
     return result
