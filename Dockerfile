@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM python:3.9
+FROM python:3.12
 
 RUN apt-get update && \
 apt-get upgrade -y && \
@@ -9,7 +9,7 @@ WORKDIR /usr/src/my_service
 COPY app app/
 COPY pyproject.toml .
 COPY poetry.lock .
-RUN pip install poetry==1.5 && \
+RUN pip install poetry==1.7 && \
 poetry export -f requirements.txt --output requirements.txt && \
 pip install -r requirements.txt
 
