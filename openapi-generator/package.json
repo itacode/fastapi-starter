@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.5.2",
-    "rimraf": "^4.4.0"
+    "@openapitools/openapi-generator-cli": "^2.7.0",
+    "rimraf": "^5.0.5"
   }
 }
