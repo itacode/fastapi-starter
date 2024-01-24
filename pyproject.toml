@@ -9,9 +9,9 @@ packages = [{ include = "app" }]
 [tool.poetry.dependencies]
 python = "^3.12"
 fastapi = "^0.109.0"
-uvicorn = {extras = ["standard"], version = "^0.26.0"}
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
 pymysql = "^1.0.2"
-cryptography = "^41.0.2"
+cryptography = "^42.0.0"
 pandas = "^2.0.1"
 pydantic = "^2.0.2"
 sqlalchemy = "^2.0.4"
