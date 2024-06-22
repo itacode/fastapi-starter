@@ -22,3 +22,42 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+
+# https://stackoverflow.com/questions/7507825/where-is-a-complete-example-of-logging-config-dictconfig
+logging_config = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "standard": {
+            "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        },
+        "uvicorn_formatter": {
+            "format": "%(asctime)s - uvicorn - %(levelname)s - %(message)s",
+        },
+    },
+    "handlers": {
+        "console": {
+            "level": "INFO",
+            "formatter": "standard",
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stdout",  # Default is stderr
+        },
+        "uvicorn_handler": {
+            "level": "INFO",
+            "formatter": "uvicorn_formatter",
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stdout",  # Default is stderr
+        },
+    },
+    "loggers": {
+        "": {
+            "handlers": ["console"],
+            "propagate": False,
+        },  # root logger
+        "uvicorn": {
+            "handlers": ["uvicorn_handler"],
+            "propagate": False,
+        },
+    },
+}
