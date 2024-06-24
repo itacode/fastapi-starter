@@ -42,10 +42,10 @@ logging_config = {
         },
     },
     "loggers": {
-        "": {
+        "": {  # root logger
             "handlers": ["console"],
             "propagate": False,
-        },  # root logger
+        },
         "uvicorn": {
             "handlers": ["console"],
             "propagate": False,

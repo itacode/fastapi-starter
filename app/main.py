@@ -7,7 +7,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.router import api_router
 from app.config import logging_config
 
-
 logging.config.dictConfig(logging_config)
 
 app = FastAPI()
@@ -18,5 +17,11 @@ app.add_middleware(
     allow_origins=origins,
     allow_methods=["*"],
 )
+
+
+@app.get("/", summary="Health check")
+def root():
+    return {"message": "Hello World!"}
+
 
 app.include_router(api_router, prefix="/api/v1/my_service")
