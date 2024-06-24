@@ -32,20 +32,11 @@ logging_config = {
         "standard": {
             "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
         },
-        "uvicorn_formatter": {
-            "format": "%(asctime)s - uvicorn - %(levelname)s - %(message)s",
-        },
     },
     "handlers": {
         "console": {
             "level": "INFO",
             "formatter": "standard",
-            "class": "logging.StreamHandler",
-            "stream": "ext://sys.stdout",  # Default is stderr
-        },
-        "uvicorn_handler": {
-            "level": "INFO",
-            "formatter": "uvicorn_formatter",
             "class": "logging.StreamHandler",
             "stream": "ext://sys.stdout",  # Default is stderr
         },
@@ -56,7 +47,7 @@ logging_config = {
             "propagate": False,
         },  # root logger
         "uvicorn": {
-            "handlers": ["uvicorn_handler"],
+            "handlers": ["console"],
             "propagate": False,
         },
     },
