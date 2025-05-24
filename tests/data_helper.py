@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 
 import pandas as pd
 from sqlalchemy import create_engine, text
@@ -7,13 +7,17 @@ from sqlalchemy.engine import Engine
 from app.config import settings
 
 connection_url = settings.get_db_url()
-data_directory = os.path.join(os.path.dirname(__file__), "data")
+data_directory = Path(__file__).resolve().parent / "data"
 
 
 class DataHelper:
-    """Helper to manage test data im the database"""
+    """Helper to manage test data in the database."""
 
-    def __init__(self, connection_url: str = connection_url, data_directory: str = data_directory) -> None:
+    def __init__(
+        self,
+        connection_url: str = connection_url,
+        data_directory: Path = data_directory,
+    ) -> None:
         self.engine: Engine = create_engine(connection_url)
         self.data_base_dir = data_directory
 
@@ -26,7 +30,7 @@ class DataHelper:
         encoding="utf8",
     ):
         """Insert in a table the data read from a CSV file in a sudirectory of test data directory"""
-        file_path = os.path.join(self.data_base_dir, subdir_file_path)
+        file_path = self.data_base_dir / subdir_file_path
         df = pd.read_csv(
             filepath_or_buffer=file_path,
             sep=sep,

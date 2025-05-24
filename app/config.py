@@ -35,7 +35,6 @@ logging_config = {
     },
     "handlers": {
         "console": {
-            "level": "INFO",
             "formatter": "standard",
             "class": "logging.StreamHandler",
             "stream": "ext://sys.stdout",  # Default is stderr
@@ -43,10 +42,12 @@ logging_config = {
     },
     "loggers": {
         "": {  # root logger
+            "level": "INFO",
             "handlers": ["console"],
             "propagate": False,
         },
         "uvicorn": {
+            "level": "INFO",
             "handlers": ["console"],
             "propagate": False,
         },

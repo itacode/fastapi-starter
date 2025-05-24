@@ -1,8 +1,5 @@
 {
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
-  "python.analysis.typeCheckingMode": "basic",
-  "flake8.importStrategy": "fromEnvironment",
-  "black-formatter.importStrategy": "fromEnvironment",
-  "isort.importStrategy": "fromEnvironment"
+  "python.analysis.typeCheckingMode": "basic"
 }
