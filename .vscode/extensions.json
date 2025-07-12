@@ -2,8 +2,6 @@
   "recommendations": [
     "ms-python.python",
     "EditorConfig.EditorConfig",
-    "charliermarsh.ruff",
-    "VisualStudioExptTeam.vscodeintellicode",
-    "mostafa.change-case"
+    "charliermarsh.ruff"
   ]
 }
