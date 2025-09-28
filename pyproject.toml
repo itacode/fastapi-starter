@@ -7,9 +7,9 @@ readme = "README.md"
 requires-python = ">=3.13"
 scripts = { dev = "app.dev_server:start" }
 dependencies = [
-    "fastapi[standard] (>=0.116.1,<0.117.0)",
+    "fastapi[standard] (>=0.117.1,<0.118.0)",
     "pymysql (>=1.1.1,<2.0.0)",
-    "cryptography (>=45.0.4,<46.0.0)",
+    "cryptography (>=46.0.1,<47.0.0)",
     "pandas (>=2.3.0,<3.0.0)",
     "sqlalchemy (>=2.0.41,<3.0.0)",
     "python-multipart (>=0.0.20,<0.0.21)",
