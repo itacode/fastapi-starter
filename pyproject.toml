@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 scripts = { dev = "app.dev_server:start" }
 dependencies = [
-    "fastapi[standard] (>=0.117.1,<0.118.0)",
+    "fastapi[standard] (>=0.119.0,<0.120.0)",
     "pymysql (>=1.1.1,<2.0.0)",
     "cryptography (>=46.0.1,<47.0.0)",
     "pandas (>=2.3.0,<3.0.0)",
@@ -22,7 +22,7 @@ dependencies = [
 dev = [
     "pytest (>=8.4.2,<9.0.0)",
     "pyright (>=1.1.405,<2.0.0)",
-    "ruff (>=0.13.1,<0.14.0)"
+    "ruff (>=0.14.0,<0.15.0)",
 ]
 
 [build-system]
