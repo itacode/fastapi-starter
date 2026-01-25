@@ -12,10 +12,6 @@ A boilerplate to start developing microservices in Python.
 - ORM [SQLAlchemy](https://www.sqlalchemy.org/)
 - Data validator [Pydantic](https://pydantic-docs.helpmanual.io/)
 - Unit test framework [pytest](https://docs.pytest.org/en/7.1.x/contents.html)
-- Linter [Flake8](https://flake8.pycqa.org/en/latest/)
-- Code formatter [Black](https://black.readthedocs.io/en/stable/)
-- Imports sorter [isort](https://pycqa.github.io/isort/)
-- Static type checker [Pyright](https://github.com/RobertCraigie/pyright-python)
 
 ## Installation
 Visual Studio Code is the recommended editor, please install the recommended extensions in `.vscode/extensions.json`.
@@ -30,7 +26,7 @@ poetry install
 ## Development
 Start the development server with automatic reload:
 ```shell
-poetry shell
+Invoke-Expression (poetry env activate)
 dev
 ```
 or
@@ -52,7 +48,6 @@ docker compose down
 
 ### Unit test
 ```shell
-poetry shell
 pytest
 ```
 
@@ -80,6 +75,5 @@ docker compose down
 
 ## Production server
 ```shell
-poetry shell
 uvicorn app.main:app
 ```
