@@ -12,6 +12,7 @@ A boilerplate to start developing microservices in Python.
 - ORM [SQLAlchemy](https://www.sqlalchemy.org/)
 - Data validator [Pydantic](https://pydantic-docs.helpmanual.io/)
 - Unit test framework [pytest](https://docs.pytest.org/en/7.1.x/contents.html)
+- Linter and code formatter [Ruff](https://docs.astral.sh/ruff/)
 
 ## Installation
 Visual Studio Code is the recommended editor, please install the recommended extensions in `.vscode/extensions.json`.
