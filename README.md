@@ -1,7 +1,9 @@
 # FastAPI starter
+
 A boilerplate to start developing microservices in Python.
 
 ## Features
+
 - Web framework [FastAPI](https://fastapi.tiangolo.com/)
 - Production ASGI web server [Uvicorn](https://www.uvicorn.org/)
 - Interactive API [documentation](http://localhost:8000/docs)
@@ -15,66 +17,86 @@ A boilerplate to start developing microservices in Python.
 - Linter and code formatter [Ruff](https://docs.astral.sh/ruff/)
 
 ## Installation
+
 Visual Studio Code is the recommended editor, please install the recommended extensions in `.vscode/extensions.json`.
 
 Install [poetry](https://python-poetry.org/docs/#installation).
 
-Install dependencies:
+Install dependencies
+
 ```shell
 poetry install
 ```
 
 ## Development
-Start the development server with automatic reload:
+
+Run the development server with automatic restart
+
 ```shell
 Invoke-Expression (poetry env activate)
 dev
 ```
+
 or
+
 ```shell
 uvicorn app.main:app --reload
 ```
 
 ### Run database Docker
+
 Run:
+
 ```shell
 cd db
 docker compose up -d --build
 ```
+
 Stop:
+
 ```shell
 cd db
 docker compose down
 ```
 
 ### Unit test
+
 ```shell
 pytest
 ```
 
 ### OpenAPI generator
-In `openapi-generator` install the required packages:
+
+In `openapi-generator` install the required packages
+
 ```shell
 npm install
 ```
-Start the server then generate clients:
+
+Start the server then generate clients
+
 ```shell
 npm run generate
 ```
 
 ## Server Docker
+
 In the project root there is the `docker-compose.yml`.
 
 Run:
+
 ```shell
 docker compose up -d --build
 ```
+
 Stop:
+
 ```shell
 docker compose down
 ```
 
 ## Production server
+
 ```shell
 uvicorn app.main:app
 ```
