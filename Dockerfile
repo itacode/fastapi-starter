@@ -1,18 +1,19 @@
 # syntax=docker/dockerfile:1
 FROM python:3.14-slim
 
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 RUN apt-get update && \
-apt-get upgrade -y && \
-python -m pip install --upgrade pip
+apt-get upgrade -y
 
 WORKDIR /usr/src/my_service
-COPY app app/
 COPY pyproject.toml .
-COPY poetry.lock .
-RUN pip install poetry==2.1.* && \
-poetry self add poetry-plugin-export && \
-poetry export -f requirements.txt --output requirements.txt && \
-pip install -r requirements.txt
+COPY uv.lock .
+RUN uv sync --frozen --no-dev --no-install-project
+
+COPY app app/
+ENV PATH="/usr/src/my_service/.venv/bin:$PATH"
 
 RUN groupadd -g 999 apiuser && \
 useradd -r -u 999 -g apiuser apiuser

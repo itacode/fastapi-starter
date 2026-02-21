@@ -20,12 +20,12 @@ A boilerplate to start developing microservices in Python.
 
 Visual Studio Code is the recommended editor, please install the recommended extensions in `.vscode/extensions.json`.
 
-Install [poetry](https://python-poetry.org/docs/#installation).
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 Install dependencies
 
 ```shell
-poetry install
+uv sync
 ```
 
 ## Development
@@ -33,8 +33,7 @@ poetry install
 Run the development server with automatic restart
 
 ```shell
-Invoke-Expression (poetry env activate)
-dev
+uv run dev
 ```
 
 or
