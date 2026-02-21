@@ -8,7 +8,7 @@ A boilerplate to start developing microservices in Python.
 - Production ASGI web server [Uvicorn](https://www.uvicorn.org/)
 - Interactive API [documentation](http://localhost:8000/docs)
 - Environment variables file `.env` for the app configuration
-- Docker `docker-compose.yml` and `Dockerfile` to run the prodution server
+- Docker `docker-compose.yml` and `Dockerfile` to run the production server
 - Openapi generator [openapi-generator-cli](https://github.com/OpenAPITools/openapi-generator-cli) configured to generate clients
 - MySQL database with docker compose
 - ORM [SQLAlchemy](https://www.sqlalchemy.org/)
